@@ -1,6 +1,6 @@
 from django.db import models
 
-class Livros(models.Model):
+class PostagemLivros(models.Model):
     titulo = models.CharField(max_length=100)
     autor = models.CharField(max_length=25)
     genero = models.CharField(max_length=15)
