@@ -4,14 +4,7 @@
 }
 
 
-  footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 220px;
-    background-color: rgb(110, 173, 228);
-  }
-  
+
   .botao_contato {
     width: 138px;
     height: 35px;
@@ -32,3 +25,5 @@
     margin-top: 65px;
     margin-left: 155px;
   }
+
+  
