@@ -23,21 +23,19 @@
 
 .cards_centro{
     display: flex !important;
-   /*  align-items: center ;
-    justify-content: center !important;
-    flex-direction: row; */
-    /* margin: 50px;
-    gap: 230px; */
+   
 }
 
-/* .linha-um{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    height: auto;    
+
+.centro{
+  display: flex;
+  justify-content: center;
 }
- */
+
+.centro h2{
+  color: black !important;
+}
+
 
  .linha_um{
     display: flex;    
@@ -45,6 +43,7 @@
     margin-top: 2rem;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 2rem;
     width: auto;
     height: auto;
 }
@@ -60,11 +59,21 @@
     height: auto;
 }
 
+.linha_tres{
+    display: flex;    
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+}
 
 .card {
     width: 20rem;     
     height: auto;    
-    background-color: rgb(192, 87, 87);
+    background-color: #898E79;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     text-align: center;
@@ -76,4 +85,64 @@
     transform: translateY(-8px); 
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
   }
-  
+
+
+
+/* CARROSSEL */
+
+
+  .carousel-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .carousel-item img {
+    max-height: 400px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+
+ .carousel-control-prev,
+.carousel-control-next {
+
+width: 5% !important; 
+left: 15%; 
+right: 15%; 
+
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+background-color: rgba(0, 0, 0, 0.5) !important;
+border-radius: 50% !important;
+
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+width: auto !important;
+left: 50%; 
+transform: translateX(-50%);
+
+
+margin-left: -220px; 
+}
+
+.carousel-control-next {
+left: auto; 
+right: 50%; 
+transform: translateX(50%); 
+margin-right: -220px; 
+}
+
+.carousel-caption h3{
+color: rgb(205, 31, 31);
+font-weight: bold;
+}

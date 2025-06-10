@@ -3,7 +3,11 @@
   padding: 0;
 }
 
+body{
+    
+  background-color: #FDF6E3;
 
+}
 
   .botao_contato {
     width: 138px;
@@ -22,8 +26,9 @@
   }
   
   .coluna_left{
-    margin-top: 65px;
+    margin-top: 150px;
     margin-left: 155px;
+    padding: 60px;
   }
 
   

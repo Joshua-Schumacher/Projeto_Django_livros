@@ -4,23 +4,19 @@
     border: 0;
 }
 
-html, body{
-    height: 100%;
-    max-width: 100%;
-}
 
-  main{
+main{
     /* flex: 1; */
     display: flex;
     justify-content: center;
     align-items: center;
     width: 99vw;
-    height: 90vh;
+    height: 100vh;
 }
 
 footer{
     bottom: 0 !important;
     width: auto;
-    height: 220px;
-    background-color: rgb(110, 173, 228);
+    /* height: 220px; */
+    background-color: 929292;
   }

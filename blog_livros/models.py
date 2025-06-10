@@ -17,3 +17,11 @@ class Meta:
     verbose_name = "Livro"  
     verbose_name_plural = "Livros" 
 
+class Cadastro(models.Model):
+    nome = models.CharField(max_length=20)
+    sobrenome = models.CharField(max_length=20)
+    email = models.EmailField(max_length=25)
+    apelido = models.CharField(max_length=20)
+    senha = models.CharField(max_length=100)
+
+
