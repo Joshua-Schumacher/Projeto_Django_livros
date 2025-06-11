@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+  main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 98vw;
+    height: 100vh;
+} 
+
+.card, h3, a {
+  margin: 5px 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.card a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #222020;
+}
+
+.cards_centro{
+    display: flex !important;
+   
+}
+
+
+.centro{
+  display: flex;
+  justify-content: center;
+}
+
+.centro h2{
+  color: black !important;
+
+}
+
+
+ .linha_um{
+    display: flex;    
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    width: auto;
+    height: auto;
+}
+
+
+.linha_dois{
+    display: flex;    
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: auto;
+}
+
+.linha_tres{
+    display: flex;    
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+}
+
+.card {
+    width: 20rem;     
+    height: auto;    
+    background-color: #898E79;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    padding: 4rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+  }
+
+
+
+/* CARROSSEL */
+
+
+  .carousel-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .carousel-item img {
+    max-height: 400px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+
+ .carousel-control-prev,
+.carousel-control-next {
+
+width: 5% !important; 
+left: 15%; 
+right: 15%; 
+
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+background-color: rgba(0, 0, 0, 0.5) !important;
+border-radius: 50% !important;
+
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+width: auto !important;
+left: 50%; 
+transform: translateX(-50%);
+
+
+margin-left: -220px; 
+}
+
+.carousel-control-next {
+left: auto; 
+right: 50%; 
+transform: translateX(50%); 
+margin-right: -220px; 
+}
+
+.carousel-caption h3{
+color: rgb(205, 31, 31);
+font-weight: bold;
+}
+
+
