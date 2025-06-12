@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section>
+    <div class="titulo"><h2>{{ titulo }}</h2></div>   
+</section>
+<section>
+     <form action="" method="post">
+        {% csrf_token %}
+        <!-- Primeira Linha -->
+        <div class="row">
+            <div class='col'>
+                <label for="id_nome"><strong>Apelido:</strong>  </label>
+                 {{ form.apelido }}
+            </div>
+            <div class='col'>
+                <label for="id_nome"><strong>Senha:</strong></label>
+                {{ form.senha  }}
+
+            </div>
+        </div>
+</section>
+
+
+
+
+{% endblock %}

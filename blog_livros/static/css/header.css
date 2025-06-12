@@ -14,11 +14,21 @@ header {
   display: flex;
   justify-content: center;
   text-align: center;
-  flex-direction: column;
+  flex-direction: column ;
  }
   
 .titulo_centro h1 , h2{
   color: aliceblue !important;
 
 }
+
+.logo{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  margin: 0 auto;
+}
+
+
+
   

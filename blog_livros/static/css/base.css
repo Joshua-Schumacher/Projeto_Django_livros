@@ -6,17 +6,15 @@
 
 
 main{
-    /* flex: 1; */
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 99vw;
+    width: 97vw !important;
     height: 100vh;
 }
 
 footer{
     bottom: 0 !important;
     width: auto;
-    /* height: 220px; */
     background-color: 929292;
   }
