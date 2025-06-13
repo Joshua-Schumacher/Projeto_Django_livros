@@ -43,3 +43,4 @@ class ContaForm(forms.ModelForm):
             "senha": forms.PasswordInput(attrs={"class": "form-control","placeholder": "Crie uma senha"}),
            
         }
+        

@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: max-content;
+    max-height: 10%;
+}
+
+.row{
+    width: 20rem;
+}
+
+
+#botao_login{
+    margin-top: 5px !important;
+}

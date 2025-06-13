@@ -23,19 +23,16 @@ header {
 }
 
 .logo{
-  width: 100px;
-  height: 100px;
   display: flex;
-  margin: 0 auto;
-}
-
-.kkk{
-display: flex;
-justify-content: center;
-align-items: center;
-
-}
-
-
-
+  margin: 10;
+  width: 17vh;
+  height: 15vh;
   
+}
+
+.teste{
+display: flex;
+margin: auto;
+align-items: center
+
+}

@@ -3,24 +3,40 @@
 
 {% block content %}
 
+
+<!-- <div class="card_login"> Login </div> -->
+
+
+
 <section>
     <div class="titulo"><h2>{{ titulo }}</h2></div>   
 </section>
 <section>
+    <h1 id="login_text">Login:</h1>
      <form action="" method="post">
-        {% csrf_token %}
-        <!-- Primeira Linha -->
-        <div class="row">
-            <div class='col'>
-                <label for="id_nome"><strong>Apelido:</strong>  </label>
-                 {{ form.apelido }}
+            {% csrf_token %}
+            <!-- Primeira Linha -->
+            <div class="row">
+                <div class='col'>
+                    <label for="id_nome"><strong>Apelido:</strong></label>
+                    <input type="text" name="apelido">
+                </div>
+                <div class='col'>
+                    <label for="id_nome"><strong>Senha:</strong></label>
+                    <input type="password" name="senha">
+                </div>
+                <button id="botao_login" class="btn-secondary " type="submit">Entrar</button>                 
             </div>
-            <div class='col'>
-                <label for="id_nome"><strong>Senha:</strong></label>
-                {{ form.senha  }}
+     </form>
 
-            </div>
-        </div>
+        {% if mensagem  %}
+        <div class="alert alert-danger" role="alert">
+            <p> {{ mensagem }}</p> <!-- Uso do conceito context -->
+        </div>      
+        {% endif %}
+        
+
+        {{usuario}}
 </section>
 
 

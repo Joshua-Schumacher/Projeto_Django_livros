@@ -16,14 +16,15 @@
            <div class='col'>
                <label for="id_nome"><strong>Autor:</strong></label>
                {{ form.autor  }}
-
            </div>
        </div>
 
        <!-- Segunda Linha -->
         <div class="row">
-           <label for="id_nome"><strong>Gênero:</strong></label>
-               {{ form.genero  }}
+            <div class="col">
+                <label for="id_nome"><strong>Gênero:</strong></label>
+                {{ form.genero  }}
+            </div>          
        </div>
 
        <!-- Terceira Linha -->
@@ -37,7 +38,7 @@
 
        <div class='row mt-3 mb-3 '>
            <div class="btn-block"> 
-               <button class="btn btn-secondary " type="submit">{{ botao }}</button>
+               <button class="btn btn-secondary " type="submit"> Postar</button>
            </div>
       </div>
        

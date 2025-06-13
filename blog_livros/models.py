@@ -17,18 +17,19 @@ class Cadastro(models.Model):
         return f"{self.nome} {self.sobrenome})"
     
     class Meta:
-        verbose_name = "Usuario"  
-        verbose_name_plural = "Usuarios" 
+        verbose_name = "Cadastro"  
+        verbose_name_plural = "Cadastro"
+        ordering = ['nome', 'sobrenome']
+
 
 class PostagemLivros(models.Model):
     autor_postagem = models.ForeignKey(
         Cadastro,                 # Relaciona com o Model Cliente
-        on_delete=models.CASCADE, # O que fazer se o cliente for excluído: exclui a conta
+        on_delete=models.CASCADE, # O que fazer se o cliente for excluído: exclui a posdtagem
         related_name='cadastro'    # Nome para acessar as contas a partir do cliente (ex: cliente.contas.all())
     )
     titulo = models.CharField(max_length=100)
-    autor = models.CharField(max_length=25)
-    
+    autor = models.CharField(max_length=25)    
     genero = models.CharField(max_length=15)
     descricao = models.CharField(max_length=200)
     resenha = models.CharField(max_length=250)
@@ -39,9 +40,8 @@ class PostagemLivros(models.Model):
     
     def __str__(self):
         # Usamos self.cliente.nome para acessar o nome do cliente relacionado
-        return f"Autor {self.id} - {self.cadastro.nome} {self.cadastro.sobrenome}"
+        return f"Autor {self.titulo} {self.autor_postagem}"
 
     class Meta:
         verbose_name = "Livro"  
-        verbose_name_plural = "Livros" 
-
+        verbose_name_plural = "Livros"

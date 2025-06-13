@@ -24,8 +24,11 @@
 
         <!-- Segunda Linha -->
          <div class="row">
-            <label for="id_nome"><strong>Apelido:</strong></label>
-                {{ form.apelido  }}
+            <div class="col">
+                
+                <label for="id_nome"><strong>Apelido:</strong></label>
+                    {{ form.apelido  }}
+            </div>
         </div>
 
         <!-- Terceira Linha -->
@@ -45,7 +48,7 @@
 
         <div class='row mt-3 mb-3 '>
             <div class="btn-block"> 
-                <button class="btn btn-secondary " type="submit">{{ botao }}</button>
+                <button class="btn btn-secondary " type="submit">Cadastrar</button>
             </div>
        </div>
         
