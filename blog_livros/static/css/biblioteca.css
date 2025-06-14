@@ -1,0 +1,66 @@
+.rectangle-4 {
+	width: 766px;
+	height: 464px;
+	padding: 8px 8px 8px 8px;
+	background: #FFFFFF;
+	border-color: #000000;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 23px 23px 23px 23px;
+}
+.paragraph-2 {
+	width: 704px;
+	height: 184px;
+	color: #000000;
+	font-family: "Helvetica";
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1.3;
+	text-align: left;
+}
+.descri-o- {
+	width: 689px;
+	height: 130px;
+	color: #000000;
+	font-family: "Helvetica";
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.3;
+	text-align: left;
+}
+.resenha- {
+	width: 72px;
+	height: 22px;
+	color: #000000;
+	font-family: "Helvetica";
+	font-weight: bold;
+	font-size: 16px;
+	text-align: left;
+}
+.g-nero- {
+	width: 57px;
+	height: 24px;
+	color: #232323;
+	font-family: "Helvetica";
+	font-weight: 400;
+	font-size: 16px;
+	text-align: left;
+}
+.autor- {
+	width: 54px;
+	height: 25px;
+	color: #000000;
+	font-family: "Arial";
+	font-weight: bold;
+	font-size: 18px;
+	text-align: left;
+}
+.t-tulo- {
+	width: 85px;
+	height: 36px;
+	color: #000000;
+	font-family: "Helvetica";
+	font-weight: bold;
+	font-size: 26px;
+	text-align: left;
+}

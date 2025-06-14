@@ -29,6 +29,11 @@ body{
     margin-top: 150px;
     margin-left: 155px;
     padding: 60px;
+    
+  
   }
 
-  
+  .coluna_left h4{
+    color: aqua !important;
+  }
+

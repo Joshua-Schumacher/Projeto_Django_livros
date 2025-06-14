@@ -12,11 +12,14 @@ class HomePage(ListView):
     model = PostagemLivros
     template_name = 'paginas/home.html' """
 
-class Cadastro(CreateView):
+class Cadastro_page(CreateView):
     model = Cadastro
     form_class = ContaForm
     template_name = 'paginas/criar_conta.html'
     success_url = reverse_lazy('home')
+
+    
+
 
 
 class PostagemLivros(CreateView):
