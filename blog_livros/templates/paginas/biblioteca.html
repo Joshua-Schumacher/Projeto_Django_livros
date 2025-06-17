@@ -6,4 +6,39 @@
 
 
 
+<section style="background-color: #FDF6E3; padding: 2rem;">
+
+    {% for post in postagem %}
+    <div style="background: white; border: 1px solid #000; border-radius: 20px; padding: 20px; margin-bottom: 30px; max-width: 800px;">
+        
+        <p class="autor-da-postagem-">Autor da postagem: {{ post.autor_postagem.apelido }}</p>
+        <h1 class="t-tulo-">Título: {{ post.titulo }}</h1>
+
+        <p class="autor-">Autor: {{ post.autor_livro }}</p>
+        <p class="g-nero-">Gênero: {{ post.genero }}</p>
+        <p class="descri-o-">Descrição: {{ post.descricao }}</p>
+
+        <p class="resenha-">Resenha:</p>
+        <p class="paragraph-2">{{ post.resenha }}</p>
+
+       <button><a href="{% url 'editar' post.id %}">Editar</a></button> 
+       <button><a href="{% url 'deletar' post.id %}">Excluir</a></button> 
+
+
+        <!-- <form method="post" action="" style="display: inline;">
+            {% csrf_token %}
+            <button type="submit" class="bootstrap-button-pressed-1">Editar</button>
+        </form> -->
+      <!--   <form method="post" action="" style="display: inline;">
+            {% csrf_token %}
+            <button type="submit" class="bootstrap-button-pressed-2">Excluir</button>
+        </form> -->
+    </div>
+    {% empty %}
+    <p>Nenhuma postagem disponível no momento.</p>
+    {% endfor %}
+
+</section>
+
+
 {% endblock %}

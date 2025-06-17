@@ -8,9 +8,7 @@ class HomePage(ListView):
      def get(self,request):
         return render(request,'paginas/home.html')
 
-""" 
-    model = PostagemLivros
-    template_name = 'paginas/home.html' """
+
 
 class Cadastro_page(CreateView):
     model = Cadastro
@@ -18,17 +16,17 @@ class Cadastro_page(CreateView):
     template_name = 'paginas/criar_conta.html'
     success_url = reverse_lazy('home')
 
-    
 
-
-
-class PostagemLivros(CreateView):
+class PostagemLivros_page(CreateView):
     model = PostagemLivros
     form_class = PostagemForm
     template_name = 'paginas/criar_postagem.html'
+    success_url = reverse_lazy('biblioteca')
+    
 
 class Biblioteca(ListView):
     model = PostagemLivros
+    context_object_name = 'postagem'
     template_name  = 'paginas/biblioteca.html'
 
 
@@ -43,27 +41,14 @@ class PostagemUpdate(UpdateView):
         context['botao'] = 'Salvar'
         return context
     
-    success_url = reverse_lazy('list_cliente')
-
-class Editar(UpdateView):
-    model = PostagemLivros
-    form_class = PostagemForm
-    template_name = 'paginas/criar_postagem.html'   
-    
-    #Deixa dinamico dados no html
-    def get_context_data(self, **kwargs):
-        #**kwargs - espera qualquer argumento
-        context = super().get_context_data(**kwargs) #Cria o context
-        context['titulo'] = 'Edição do Post'
-        context['botao'] = 'Editar'
-        return context
     success_url = reverse_lazy('biblioteca')
+
 
 #Classe exlcuir
 
 class Deletar(DeleteView):
     model = PostagemLivros
-    template_name = 'paginas/'
+    template_name = 'paginas/deletar.html'
     success_url = reverse_lazy('biblioteca')
 
 
@@ -80,12 +65,12 @@ class Login(View):
         senha = request.POST.get('senha')
  
         if apelido and senha:
-            usuario = Cadastro # Puxa o primeiro cliente com o apelido e senha
+            usuario = Cadastro.objects.filter(apelido=apelido, senha=senha).first() # Puxa o primeiro cliente com o apelido e senha
             
             if usuario:
                 #Vamos criar as seções
-                request.session['apelido_usuario'] = usuario
-                return render(request, 'paginas/login.html') 
+                request.session['apelido_usuario'] = usuario.apelido
+                return render(request, 'paginas/home.html') 
             else:
                 erro_message = "Nenhum cliente encontrado!"
                 return render(request, 'paginas/login.html',{'mensagem':erro_message})
@@ -94,3 +79,13 @@ class Login(View):
         else:
             erro_message = "Por Favor, informe um apelido e senha para consulta"
             return render(request, 'paginas/login.html',{'mensagem':erro_message})
+
+
+class Logout(View):
+    #Metodo que verifica e encerra a sessão
+    def get(self, request): 
+        if 'apelido_usuario' in request.session:
+            del request.session['apelido_usuario']
+
+        erro_message = 'Você foi desconectado!'
+        return render(request, 'paginas/logout.html', {'mensagem': erro_message})

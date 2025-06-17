@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+ 
+{% block content %}
+ 
+<section class="row d-flex justify-content-sm-center text-center mt-5 ">
+    <div class="col-sm-10 align-items-center">    
+        <h1 >Deletar Postagem</h1>        
+        <p>Tem certeza que deseja deletar a postagem do livro:"{{ PostagemLivro.titulo }}?</p>
+       
+        <form method="post" class="align-items-center">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger btn-sm">Deletar</button>
+            <a href="{% url 'biblioteca' %} " class="btn btn-dark btn-sm">Cancelar</a>
+        </form>        
+    </div>
+</section>
+ 
+ 
+{% endblock %}

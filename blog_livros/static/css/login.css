@@ -1,35 +1,13 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    height: max-content;
-    max-height: 10%;
-    display: flex;
-}
-
 .row{
     width: 20rem;
+    border: 4px solid #000000;
+    border-radius: 15px;
 }
 
 
 #botao_login{
     width: 55px !important;
     border-radius: 25;
-}
-
-.sec{
-    border: 1px solid #4158d0; /* Testes */
-    border-radius: 15px; /* Testes */
-    width: 500px; /* Testes */
-    height: auto; /* Testes */
-    padding: 32px; /* Testes */
-    display: flex; /* Testes */
-    flex-direction: column; /* Testes */
-    background-color: #fdfdfd ;
-    border:1px solid;
-    border-radius:10px;
-    text-align: center;
-
 }
 
 

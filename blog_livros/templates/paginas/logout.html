@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+{% if mensagem %}
+<style>
+
+.coluna{
+    display: flex;
+    flex-direction: column;
+    font-size: 50px;
+    color: rgb(167, 50, 50);
+    
+}
+
+
+
+
+</style>
+<p class="letra">
+    <div class="coluna">
+        
+        {{ mensagem }}   
+
+        <button class="btn btn-secondary " type="submit"><a href="{% url 'login' %}">Clique aqui para autenticar!</a></button>
+            
+    </div>
+</p>
+{% endif %}
+
+
+{% endblock %}
+

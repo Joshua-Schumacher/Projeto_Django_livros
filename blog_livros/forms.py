@@ -17,10 +17,10 @@ class PostagemForm(forms.ModelForm):
         widgets = {
             "titulo": forms.TextInput(attrs={"class": "form-control","placeholder": "Título do livro"}),
             "autor": forms.TextInput(attrs={"class":"form-control","placeholder": "Nome do autor"}),
-            "autor_postagem": forms.TextInput(attrs={"class": "form-control","placeholder": 'vazio....' }), 
+            "autor_postagem": forms.Select(attrs={"class": "form-control","placeholder": 'vazio....' }), 
             "data_postagem": forms.DateInput(attrs={"class": "form-control","placeholder": "DD/MM/AAAA", 'type': 'date'}), 
-            "descricao": forms.TextInput(attrs={"class": "form-control","placeholder": "Resuma o enredo do livro"}),
-            "resenha": forms.TextInput(attrs={"class": "form-control","placeholder": "Comente"}), 
+            "descricao": forms.Textarea(attrs={"class": "form-control","placeholder": "Resuma o enredo do livro"}),
+            "resenha": forms.Textarea(attrs={"class": "form-control","placeholder": "Comente"}), 
             "genero": forms.TextInput(attrs={"class": "form-control","placeholder": "Ex: fantasia, romance,terror... "}), 
         }
 

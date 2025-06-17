@@ -1,6 +1,6 @@
 .rectangle-4 {
-	width: 766px;
-	height: 464px;
+	width: auto !important;
+	height: auto !important;
 	padding: 8px 8px 8px 8px;
 	background: #FFFFFF;
 	border-color: #000000;
@@ -9,8 +9,8 @@
 	border-radius: 23px 23px 23px 23px;
 }
 .paragraph-2 {
-	width: 704px;
-	height: 184px;
+	width: 100px;
+	height: 100px;
 	color: #000000;
 	font-family: "Helvetica";
 	font-weight: 400;

@@ -1,22 +1,53 @@
 {% load static %}
 
+
+<style>
+
+.nome_topo{
+  color:white !important;
+  display: flex;
+  align-items: center;
+  gap: 2vh;
+  margin-left: 140px;
+  
+  
+}
+
+
+
+</style>
+
 <section class="teste">
-      
+
       <div class="logo">
-            
-            <a href="{% url 'home' %}"> <img src="{% static 'img/Logo_branco.png' %}" alt="imagem" width="148" height="150"></a>
-            
+
+            <a href="{% url 'home' %}"> <img src="{% static 'img/Logo_branco.png' %}" alt="imagem" width="148"
+                        height="150"></a>
+
       </div>
       <div class="titulo_centro">
-       <h1> Resenhando</h1>
-       <h2>Sua comunidade literária</h2>
+            <h1> Resenhando</h1>
+            <h2>Sua comunidade literária</h2>
       </div>
-      
-      
+
+<!--       <div class="nome_topo">
+            {% if request.session.apelido_usuario %}
+            Seja Bem vindo! {{request.session.apelido_usuario}}
+           <h3><a href="{% url 'logout' %}">Sair</a></h3>
+            {% endif %}
+      </div> -->
+
 </section>
 
 <section>
-<h3 class="color_cadastro"><a href="{% url 'criar_conta' %}">Cadastrar</a></h3>
+      
+      
+      
+      <div class="nome_topo">
+            {% if request.session.apelido_usuario %}
+            Seja Bem vindo! {{request.session.apelido_usuario}}
+            <h3><a href="{% url 'logout' %}">Sair</a></h3>
+            {% endif %}
+           <h3 class="color_cadastro"><a href="{% url 'criar_conta' %}">Cadastrar</a></h3>
+      </div>
 </section>
-
-
