@@ -21,6 +21,13 @@ class PostagemLivros_page(CreateView):
     model = PostagemLivros
     form_class = PostagemForm
     template_name = 'paginas/criar_postagem.html'
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['titulo_pagina'] = 'Faça a sua resenha'
+        context['botao'] = 'Publicar'
+        return context
+
     success_url = reverse_lazy('biblioteca')
     
 
@@ -37,7 +44,7 @@ class PostagemUpdate(UpdateView):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['titulo'] = 'Resenha'
+        context['titulo_pagina'] = 'Resenha'
         context['botao'] = 'Salvar'
         return context
     

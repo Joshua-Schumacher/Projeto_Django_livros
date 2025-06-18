@@ -15,69 +15,88 @@
         border: 1px solid #ccc;
         border-radius: 4px;
         resize: vertical;
+
     }
+
+    .em_coluna{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #titulo_post{
+        color: black !important;
+        margin-bottom: 50px;
+    }
+
+    
 </style>
-    
-    
+
+<section class="em_coluna">
+    <div >
+        <h2 id="titulo_post"> {{ titulo_pagina }}</h2>
+    </div>
+
     <section>
-        <form action="{% url 'criar_post' %}" method="post">
+        <form action="" method="post">
             {% csrf_token %}
             <!-- Primeira Linha -->
             <div class="row">
                 <div class='col'>
-                    <label for="id_nome"><strong>Autor Postagem:</strong></label>
+                    <label for="id_autor_postagem"><strong>Autor Postagem:</strong></label>
                     {{ form.autor_postagem }}
                 </div>
                 <div class='col'>
-                    <label for="id_nome"><strong>Titulo:</strong> </label>
+                    <label for="id_titulo"><strong>Titulo:</strong> </label>
                     {{ form.titulo }}
-                </div>               
+                </div>
 
                 <div class='col'>
-                    <label for="id_nome"><strong>Autor:</strong></label>
+                    <label for="id_autor"><strong>Autor:</strong></label>
                     {{ form.autor }}
                 </div>
             </div>
-    
+
             <!-- Segunda Linha -->
             <div class="row">
                 <div class="col">
-                    <label for="id_nome"><strong>Gênero:</strong></label>
+                    <label for="id_genero"><strong>Gênero:</strong></label>
                     {{ form.genero }}
                 </div>
             </div>
-    
+
             <div class="row">
                 <div class="col">
-                    <label for="id_nome"><strong>Descrição:</strong></label>     
-                        {{ form.descricao }}       
+                    <label for="id_descricao"><strong>Descrição:</strong></label>
+                    {{ form.descricao }}
                 </div>
             </div>
-    
+
             <!-- Terceira Linha -->
             <div class="row">
                 <div class='col'>
-                    <label for="id_nome"><strong>Resenha:</strong></label>
+                    <label for="id_resenha"><strong>Resenha:</strong></label>
                     {{ form.resenha }}
-                </div>             
+                </div>
             </div>
             <div class="row">
                 <div class='col'>
-                    <label for="id_nome"><strong>Data Postagem:</strong></label>
+                    <label for="id_data_postagem"><strong>Data Postagem:</strong></label>
                     {{ form.data_postagem }}
                 </div>
             </div>
-           
-           
+
+
             <div class='row mt-3 mb-3 '>
                 <div class="btn-block">
-                    <button class="btn btn-secondary " type="submit">Postar</button>
+                    <button class="btn btn-primary " type="submit"> {{ botao }}</button>
                 </div>
-            </div> 
+            </div>
 
-           
-            
+
+
         </form>
     </section>
+</section>
 
 {% endblock %}

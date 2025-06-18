@@ -9,7 +9,7 @@
 <section style="background-color: #FDF6E3; padding: 2rem;">
 
     {% for post in postagem %}
-    <div style="background: white; border: 1px solid #000; border-radius: 20px; padding: 20px; margin-bottom: 30px; max-width: 800px;">
+    <div style="background: white; border: 1px solid #000; border-radius: 20px; padding: 20px; margin-bottom: 30px; min-width: 450px; max-width: 800px;">
         
         <p class="autor-da-postagem-">Autor da postagem: {{ post.autor_postagem.apelido }}</p>
         <h1 class="t-tulo-">Título: {{ post.titulo }}</h1>
@@ -25,14 +25,6 @@
        <button><a href="{% url 'deletar' post.id %}">Excluir</a></button> 
 
 
-        <!-- <form method="post" action="" style="display: inline;">
-            {% csrf_token %}
-            <button type="submit" class="bootstrap-button-pressed-1">Editar</button>
-        </form> -->
-      <!--   <form method="post" action="" style="display: inline;">
-            {% csrf_token %}
-            <button type="submit" class="bootstrap-button-pressed-2">Excluir</button>
-        </form> -->
     </div>
     {% empty %}
     <p>Nenhuma postagem disponível no momento.</p>
